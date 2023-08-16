@@ -12,6 +12,8 @@ variables:
   imageName: 'pipelines-javascript-docker'
 
 steps:
+  - script: sudo chmod 666 /var/run/docker.sock
+
   - task: Docker@2
     displayName: Build an image
     inputs:
